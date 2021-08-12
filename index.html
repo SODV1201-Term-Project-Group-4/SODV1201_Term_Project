@@ -1,35 +1,417 @@
 <!DOCTYPE html>
-<html lang= "en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">  
-		<title>SODV 1201 Term Project </title>
-		<link rel="stylesheet" href="SODV_1201_TermProject_StyleSheet.css" >
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">  </script>
-		<script src="jquery-3.5.1.min.js"></script>
-		<script src="SODV_1201_TermProject_JavaScript.js"></script>
-		
-	</head>
-	<body>
-		<h1> SODV 1201 Introduction to Web Programming  </h1>
-			<h1>Term Project  </h1>
-		<div class = "navBar">
-			<a class = "active" href = "index.html" > Home </a>
-			<a href = "SODV_1201_TermProjectpg2.html" > About </a>
-			<a href = "SODV_1201_TermProjectpg3.html" > Products and Services  </a>
-			<a href = "SODV_1201_TermProjectpg4.html" > Contact Us  </a>
-			<a href= "SODV_1201_TermProjectpg5.html"> Site Map </a>
-		</div> 
-		<div class = "Container">
-			<div id = "box1">
-				<p  id = "Intro">
-					
-				</p>
-			</div>
-			<div id = "box2">
-				
-			</div>
-				</div>
-		<footer> Programmed by Paul K Kho and (Assigned Partner Name) , Bow Valley College Software Development, &#169 2021.</footer>
-	</body>
+<!-- 
+    SODV 1201 Term Project
+    Programmed by SODV 1201 Group 4, Paul K Kho and Muhammad Haider
+    Based on instructions provided by Dima Marachi, SODV 1201 instructor
+    Course name: Introduction to Web Programming
+    Course number: SODV 1201 
+    Due: August 16 2021
+-->
+<html lang="en">
+
+<head>
+    <title>CLOUD 9 Car Rental</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <!-- LOGO -->
+        <div class="cloud">
+            <div class="cloudshadow">
+                <a class="navbar-brand" href="index.html">CLOUD<span>9</span></a>
+            </div>
+        </div>
+        <!-- END LOGO -->
+        <!-- Naviagation bar -->
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"></li>
+                    <div class="dropdown">
+                        <p class="dropbtn">Cars</p>
+                        <div class="dropdown-content">
+                            <a href="services.html" class="nav-item">Services</a>
+                            <a href="pricing.html" class="nav-item">Pricing</a>
+                        </div>
+                    </div>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END nav -->
+    <!-- Banner Page -->
+    <div class="hero-wrap ftco-degree-bg" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text justify-content-start align-items-center justify-content-center">
+                <div class="col-lg-8 ftco-animate">
+                    <div class="text w-100 text-center mb-md-5 pb-md-5">
+                        <h1 class="mb-4">Fast &amp; Easy Luxury Cars Rental</h1>
+                        <p style="font-size: 18px;">Pick a car from our wide variety of selections for personal use and special events</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Banner -->
+    <section class="ftco-section ftco-no-pt bg-light">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-md-12	featured-top">
+                    <div class="row no-gutters">
+                        <div class="col-md-4 d-flex align-items-center">
+                            <form action="#" class="request-form ftco-animate bg-primary">
+                                <h2>Make your trip</h2>
+                                <div class="form-group">
+                                    <label for="" class="label">Pick-up location</label>
+                                    <input type="text" class="form-control" placeholder="City, Airport, Station, etc">
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="label">Drop-off location</label>
+                                    <input type="text" class="form-control" placeholder="City, Airport, Station, etc">
+                                </div>
+                                <div class="d-flex">
+                                    <div class="form-group mr-2">
+                                        <label for="" class="label">Pick-up date</label>
+                                        <input type="text" class="form-control" id="book_pick_date" placeholder="Date">
+                                    </div>
+                                    <div class="form-group ml-2">
+                                        <label for="" class="label">Drop-off date</label>
+                                        <input type="text" class="form-control" id="book_off_date" placeholder="Date">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="label">Pick-up time</label>
+                                    <input type="text" class="form-control" id="time_pick" placeholder="Time">
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" value="Rent A Car Now" class="btn btn-secondary py-3 px-4">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-8 d-flex align-items-center">
+                            <div class="services-wrap rounded-right w-100">
+                                <h3 class="heading-section mb-4">Better Way to Rent Your Perfect Cars</h3>
+                                <div class="row d-flex mb-4">
+                                    <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                                        <div class="services w-100 text-center">
+                                            <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-route"></span></div>
+                                            <div class="text w-100">
+                                                <h3 class="heading mb-2">Choose Your Pickup Location</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                                        <div class="services w-100 text-center">
+                                            <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-handshake"></span></div>
+                                            <div class="text w-100">
+                                                <h3 class="heading mb-2">Select the Best Deal</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                                        <div class="services w-100 text-center">
+                                            <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-rent"></span></div>
+                                            <div class="text w-100">
+                                                <h3 class="heading mb-2">Reserve Your Rental Car</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p><a href="pricing.html" class="btn btn-primary py-4 px-5">Reserve</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ftco-section ftco-no-pt bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12 heading-section text-center ftco-animate mb-5">
+                    <span class="subheading">What we offer</span>
+                    <h2 class="mb-2" style="
+                       border-radius: 104px; 
+                       background: #fff;">Featured Vehicles</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="carousel-car owl-carousel">
+                        <div class="item">
+                            <div class="car-wrap rounded ftco-animate">
+                                <div class="img rounded d-flex align-items-end" style="background-image: url(images/car-1.jpg);">
+                                </div>
+                                <div class="text">
+                                    <h2 class="mb-0"><a href="#">Mercedes Grand Sedan</a></h2>
+                                    <div class="d-flex mb-3">
+                                        <span class="cat">Mercedes Benz</span>
+                                        <p class="price ml-auto">$250 <span>/day</span></p>
+                                    </div>
+                                    <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Book now</a> <a href="#" class="btn btn-secondary py-2 ml-1">Details</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="car-wrap rounded ftco-animate">
+                                <div class="img rounded d-flex align-items-end" style="background-image: url(images/car-2.jpg);">
+                                </div>
+                                <div class="text">
+                                    <h2 class="mb-0"><a href="#">Range Rover</a></h2>
+                                    <div class="d-flex mb-3">
+                                        <span class="cat">Land Rover</span>
+                                        <p class="price ml-auto">$350 <span>/day</span></p>
+                                    </div>
+                                    <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Book now</a> <a href="#" class="btn btn-secondary py-2 ml-1">Details</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="car-wrap rounded ftco-animate">
+                                <div class="img rounded d-flex align-items-end" style="background-image: url(images/car-3.jpg);">
+                                </div>
+                                <div class="text">
+                                    <h2 class="mb-0"><a href="#">Mclaren 720s</a></h2>
+                                    <div class="d-flex mb-3">
+                                        <span class="cat">Mclaren</span>
+                                        <p class="price ml-auto">$750 <span>/day</span></p>
+                                    </div>
+                                    <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Book now</a> <a href="#" class="btn btn-secondary py-2 ml-1">Details</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="car-wrap rounded ftco-animate">
+                                <div class="img rounded d-flex align-items-end" style="background-image: url(images/car-4.jpg);">
+                                </div>
+                                <div class="text">
+                                    <h2 class="mb-0"><a href="#">Lamborghini Aventador</a></h2>
+                                    <div class="d-flex mb-3">
+                                        <span class="cat">Lamborghini</span>
+                                        <p class="price ml-auto">$550 <span>/day</span></p>
+                                    </div>
+                                    <p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Book now</a> <a href="#" class="btn btn-secondary py-2 ml-1">Details</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About us summary -->
+    <section class="ftco-section ftco-about">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-left" style="background-image: url(images/about.jpg);">
+                </div>
+                <div class="col-md-6 wrap-about ftco-animate">
+                    <div class="heading-section heading-section-white pl-md-5">
+                        <span class="subheading">About us</span>
+                        <h2 class="mb-4">Welcome to CLOUD9</h2>
+                        <p>Our head office is located just outside Rome, Italty. Cloud 9 was founded by a team of technologists twenty years ago. Here on our state of the art R & D facility, our teams design, build and test our creations every month. We
+                            have fully- trained professional technologists from around the world. Our teams made perfectly replicas of these beautiful vehicles. We have their original designers' permissions. To view our certifications, please <a class="btn btn-secondary px-4">click here</a>.
+                            We will take you on a guided virtual tour to show you how we create your dream rides.
+                        </p>
+                        <p>Here at CLOUD9 we put our customers first. We wanted to allow our users the ability to drive a luxury sportscar without the insane costs associated with them.
+                        </p>
+                        <p><a href="about.html" class="btn btn-secondary py-3 px-4">Learn More...</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END about us -->
+    <section class="ftco-section testimony-section bg-light">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-7 text-center heading-section ftco-animate">
+                    <span class="subheading"></span>
+                    <h2 class="mb-3">Meet The Team</h2>
+                </div>
+            </div>
+            <div class="row ftco-animate">
+                <div class="col-md-12">
+                    <div class="carousel-testimony owl-carousel ftco-owl">
+                        <div class="item">
+                            <div class="testimony-wrap rounded text-center py-4 pb-5">
+                                <div class="user-img mb-2" style="background-image: url(images/person_1.jpg)">
+                                </div>
+                                <div class="text pt-4">
+                                    <p class="mb-4">
+                                        I just got married a month ago, we were hoping to rent a lamborghini for the day but when we found out it costs $2,500 per DAY to rent one we felt our dreams were shattered. We had nearly given up when we came across CLOUD9. With CLOUD9 we found an exact
+                                        replica of the lamborghini of our dreams and we even rented a Rolls Royce too for half the cost for the day. The exterior and the interior were exactly the same! Thanks to them we were able to have our dream wedding.
+                                    </p>
+                                    <p class="name">Scott Benson</p>
+                                    <span class="position">Automotive Engineer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimony-wrap rounded text-center py-4 pb-5">
+                                <div class="user-img mb-2" style="background-image: url(images/person_5.jpg)">
+                                </div>
+                                <div class="text pt-4">
+                                    <p class="mb-4">
+                                        If you love cars you got to check out CLOUD9!
+                                    </p>
+                                    <p class="name">Alexandra Mary Hirschi</p>
+                                    <span class="position">Car Enthusiast</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimony-wrap rounded text-center py-4 pb-5">
+                                <div class="user-img mb-2" style="background-image: url(images/person_4.jpg)">
+                                </div>
+                                <div class="text pt-4">
+                                    <p class="mb-4">
+                                    </p>
+                                    <p class="name">Muhammad Haider</p>
+                                    <span class="position">Inventor</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ftco-counter ftco-section img bg-light" id="section-counter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+                    <div class="block-20">
+                        <div class="text text-border d-flex align-items-center">
+                            <strong class="number" data-number="45">0</strong>
+                            <span>Year <br>Experienced</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+                    <div class="block-20">
+                        <div class="text text-border d-flex align-items-center">
+                            <strong class="number" data-number="1000">0</strong>
+                            <span>Total <br>Cars</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+                    <div class="block-20">
+                        <div class="text text-border d-flex align-items-center">
+                            <strong class="number" data-number="50000">0</strong>
+                            <span>Happy <br>Customers</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+                    <div class="block-20">
+                        <div class="text d-flex align-items-center">
+                            <strong class="number" data-number="47">0</strong>
+                            <span>Total <br>Branches</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2"><a href="#" class="logo">CLOUD<span>9</span></a></h2>
+                        <p>
+                            Where luxury meets affordability, we can make your dream ride come to life.
+                        </p>
+                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                            <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4 ml-md-5">
+                        <h2 class="ftco-heading-2">Information</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="about.html" class="py-2 d-block">About</a></li>
+                            <li><a href="services.html" class="py-2 d-block">Services</a></li>
+                            <li><a href="references.txt" class="py-2 d-block">Term and Conditions</a></li>
+                            <li><a href="#" class="py-2 d-block">Privacy &amp; Cookies Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Customer Support</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="py-2 d-block">FAQ</a></li>
+                            <li><a href="#" class="py-2 d-block">Payment Option</a></li>
+                            <li><a href="#" class="py-2 d-block">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Have a Question?</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+                                <li><span class="icon icon-map-marker"></span><span class="text">2615 12 St. N.E, Calgary, Alberta, Canada</span></li>
+                                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+1 (403)-557-4940</span></a></li>
+                                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">contact@cloud9.ca</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>Copyright &copy;
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script> All rights reserved | Paul Kho and Muhammad Haider </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
 </html>
